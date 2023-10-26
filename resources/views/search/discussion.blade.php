@@ -38,10 +38,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
-                    <img src="/images/icon.png" alt="" width="100" height="40" class="d-inline-block align-text-top" style="margin-right: 1rem">
-                    
+                    <img src="/images/icon.png" alt="" width="100" height="40"
+                        class="d-inline-block align-text-top" style="margin-right: 1rem">
+
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,7 +56,8 @@
                             <a class="nav-link" href="/users">Users</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Profile
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -70,49 +74,51 @@
                         </li>
                     </ul>
                     <form class="d-flex" method="get" action="/search/discussion">
-                        <input name="title" class="form-control me-2" type="search" placeholder="Search discussions" aria-label="Search">
+                        <input name="title" class="form-control me-2" type="search" placeholder="Search discussions"
+                            aria-label="Search">
                         <button class="btn btn-outline-primary" type="submit">Search</button>
                     </form>
                 </div>
             </div>
         </nav>
         <div class="discussion-title">
-        @forelse ($discussions as $d)
-        <main class="discussion-title-content">
-            <div class="author-information">
-                <img class="profile-logo" src="../images/profile.png" alt="profile-logo">
-                {{$d->user->username}}
-            </div>
-            <a href="/discussion/{{$d->id}}">
-                <h1>
-                    {{$d->title}}
-                </h1>
-            </a>
-            <p>
-                {{$d->description}}
-            </p>
-            <hr>
-            <div class="comment">
-                <a><img class="comment-logo" src="../images/comment.png" alt="comment-logo">
-                    {{count($d->comments)}} Comments
-                </a>
-            </div>
-            <div class="upvote">
-                <a> <img class="upvote-logo" src="../images/upvote.png" alt="upvote-logo"> 0 Upvotes </a>
-            </div>
-            <div class="downvote">
-                <a> <img class="downvote-logo" src="../images/downvote.png" alt="downvote-logo"> 0 Downvotes </a>
-            </div>
-            <div class="favorite">
-                <a> <img class="favorite-logo" src="../images/bookmark.png" alt="favorite-logo"> 0 Favorites </a>
-            </div>
-        </main>
-        @empty
-        <main class="discussion-title-content">
-            <h1 style="text-align: center;">Discussion not found</h1>
-        </main>
-        @endforelse
-    </div>
+            @forelse ($discussions as $d)
+                <main class="discussion-title-content">
+                    <div class="author-information">
+                        <img class="profile-logo" src="../images/profile.png" alt="profile-logo">
+                        {{ $d->user->username }}
+                    </div>
+                    <a href="/discussion/{{ $d->id }}">
+                        <h1>
+                            {{ $d->title }}
+                        </h1>
+                    </a>
+                    <p>
+                        {{ $d->description }}
+                    </p>
+                    <hr>
+                    <div class="comment">
+                        <a><img class="comment-logo" src="../images/comment.png" alt="comment-logo">
+                            {{ count($d->comments) }} Comments
+                        </a>
+                    </div>
+                    <div class="upvote">
+                        <a> <img class="upvote-logo" src="../images/like.png" alt="upvote-logo"> 0 Upvotes </a>
+                    </div>
+                    <div class="downvote">
+                        <a> <img class="downvote-logo" src="../images/dislike.png" alt="downvote-logo"> 0 Downvotes </a>
+                    </div>
+                    <div class="favorite">
+                        <a> <img class="favorite-logo" src="../images/bookmark.png" alt="favorite-logo"> 0 Favorites
+                        </a>
+                    </div>
+                </main>
+            @empty
+                <main class="discussion-title-content">
+                    <h1 style="text-align: center;">Discussion not found</h1>
+                </main>
+            @endforelse
+        </div>
     </section>
     <br>
 
