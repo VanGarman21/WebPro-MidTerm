@@ -1,0 +1,118 @@
+html,
+body{
+    height: 100%
+}
+
+body{
+    /* display: flex; */
+    align-items: center;
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
+    background-color: rgb(23, 23, 23);
+    /* height: fit-content;
+    width: fit-content;
+    max-width: 100%; */
+}
+
+.navbar navbar-expand-lg navbar-dark bg-dark{
+    position: absolute;
+    width: 1080px;
+    display: block;
+    padding-bottom: 15px;
+}
+
+p{
+    font-size: 16px;
+}
+
+.discussion-title{
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 1%;
+    /*top: 2rem;*/
+    /* left: 10rem;
+    right: 10rem; */
+    align-items: center;
+    justify-content: center;
+    resize: none;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.discussion-title .discussion-title-content{
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    padding-right: 100px;
+    padding-left: 25px;
+    border: 2px solid rgb(39, 39, 39);
+    background-color: rgb(39, 39, 39);
+    font-size: 1rem;
+    border-radius: 10px 10px 10px 10px;
+    width: 1080px;
+    text-decoration: none !important;
+    resize: none;
+}
+
+.discussion-title .discussion-title-content .author-information{
+    margin-bottom: 5px;
+}
+
+.discussion-title .discussion-title-content h1{
+    font-size: 2rem;
+}
+
+.discussion-title .discussion-title-content .comment{
+    position: relative;
+    top: -1px;
+}
+
+.comment-logo{
+    height: 3%;
+    width: 3%;
+    margin-right: 1px;
+    opacity: 0.5;
+}
+
+.discussion-title .discussion-title-content .upvote{
+    position: relative;
+    top: -1.76rem;
+    left: 10rem;
+}
+.upvote-logo{
+    height: 3%;
+    width: 3%;
+    margin-right: 1px;
+}
+.discussion-title .discussion-title-content .downvote{
+    position: relative;
+    top: -3.56rem;
+    left: 20rem;
+}
+.downvote-logo{
+    height: 3%;
+    width: 3%;
+    margin-right: 1px;
+}
+
+.discussion-title .discussion-title-content .favorite{
+    position: relative;
+    top: -5.4rem;
+    left: 30rem;
+    bottom: 0;
+}
+.favorite-logo{
+    height: 1%;
+    width: 1.5%;
+    margin-right: 1px;
+    opacity: 0.5;
+
+}
+.profile-logo{
+    height: 5%;
+    width: 5%;
+    margin-right: 1rem;
+    opacity: 0.5;
+    resize: none;
+}
+
